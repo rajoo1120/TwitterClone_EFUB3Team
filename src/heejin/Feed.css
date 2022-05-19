@@ -1,0 +1,41 @@
+.feed {
+  border-right: 1px solid lightgray;
+  min-width: fit-content;
+  overflow-y: scroll;
+  max-width: 600px;
+}
+
+.feed::-webkit-scrollbar {
+  display: none;
+}
+
+.feed {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.feed_header {
+  width: 500px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.feed_header .feed_header_right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.feed_header_font {
+  font-weight: bold;
+}
+.feed_header > h2 {
+  font-size: 20px;
+  font-weight: 800;
+}

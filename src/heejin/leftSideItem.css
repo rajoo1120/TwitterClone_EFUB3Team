@@ -1,0 +1,22 @@
+.leftSideBar_item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.leftSideBar_item:hover {
+  background-color: #ececec;
+  border-radius: 30px;
+  transition: color 100ms ease-out;
+}
+
+.leftSideBar_item .leftSideBar_icon {
+  padding: 10px;
+  font-size: 30px;
+}
+
+.leftSideBar_item .leftSideBar_text {
+  font-weight: 700;
+  font-size: 20px;
+  margin-right: 20px;
+}

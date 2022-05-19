@@ -1,0 +1,42 @@
+.leftSideBar {
+  border-right: 1px solid lightgrey;
+  min-width: 250px;
+  position: sticky; /*스크롤해도 element 고정되게*/
+  overflow: auto; /*넘치면 스크롤*/
+  overflow-y: scroll;
+  padding-right: 30px;
+}
+
+/*스크롤 바 숨기기*/
+.leftSideBar::-webkit-scrollbar {
+  display: none;
+}
+
+.leftSideBar > .leftSideBar_icon {
+  color: var(--twitter-color);
+  padding: 10px;
+  font-size: 30px;
+}
+
+.leftSidebar_btn {
+  background-color: var(--twitter-color) !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 900 !important;
+  text-transform: inherit !important;
+  border-radius: 40px !important;
+  height: 50px !important;
+  margin-top: 20px !important;
+  font-size: 100;
+  width: 100%;
+  cursor: pointer;
+}
+
+.leftSidebar_btn:hover {
+  background-color: #4799cc !important;
+  transition: color 100ms ease-out;
+}
+
+.leftSidebar_profile {
+  margin-top: 30%;
+}
