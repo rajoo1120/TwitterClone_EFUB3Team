@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React from 'react';
 import {MoreIcon} from './Icon';
+import IconButton from "./IconButton";
 
 const ItemBox = styled.div`
   cursor: pointer;
@@ -34,33 +35,6 @@ const ItemFooter = styled.div`
   margin-top: 4px;
 `;
 
-const ItemMore = styled.div`
-  position: absolute;
-  top: 1px;
-  right:0px;
-  width: 1.25rem;
-  display:flex;
-  justify-content: center;
-  align-content: center;
-  
-  padding:8px;
-  margin:-8px;
-  border-radius: 9999px;
-  transition-property: background-color;
-  transition-duration: 0.2s;
-  &:hover {
-    background-color: rgb(29, 155, 240, 0.1);
-  }
-  
-  svg {
-    transition-property: fill;
-    transition-duration: 0.2s;
-  }
-  &:hover svg{
-    fill: rgb(29, 155, 240);
-  }
-`;
-
 const TrendItem = ({rank, field=null, keyword, tweetAmount}) => {
   return (
     <ItemBox>
@@ -78,9 +52,7 @@ const TrendItem = ({rank, field=null, keyword, tweetAmount}) => {
         <ItemFooter>
           { tweetAmount } 트윗
         </ItemFooter>
-        <ItemMore>
-          <MoreIcon/>
-        </ItemMore>
+        <IconButton float><MoreIcon/></IconButton>
       </div>
     </ItemBox>
   );

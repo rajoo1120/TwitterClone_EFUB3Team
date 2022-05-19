@@ -49,6 +49,19 @@ const ProfileImg = styled.div`
     min-width: 50%;
     min-height: 50%;
   }
+  
+  div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 26, 0);
+
+    transition-property: background-color;
+    transition-duration: 0.2s;
+  }
+  div:hover {
+    background-color: rgba(26, 26, 26, 0.15);
+  }
 `;
 
 const ProfileName = styled.div`
@@ -89,7 +102,8 @@ const FollowItem = ({name, id, imgSrc = null}) => {
   return (
     <ItemBox>
       <ProfileImg>
-        <img src={imgSrc}/>
+        <img alt='profile' src={imgSrc}/>
+        <div/>
       </ProfileImg>
       <HorizonBox>
         <ProfileInfo>

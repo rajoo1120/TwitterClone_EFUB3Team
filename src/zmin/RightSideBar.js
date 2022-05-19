@@ -10,8 +10,7 @@ const EmptySpace = styled.div`
 
 const RightContent = styled.div`
   width: 350px;
-  padding-left: 20px;
-  padding-left: 20px;
+  padding-left: 30px; 
 `;
 
 const RightSideBar = () => {
@@ -22,6 +21,7 @@ const RightSideBar = () => {
       <Trends/>
       <FollowRecommendation/>
       <RightFooter/>
+      <EmptySpace/>
     </RightContent>
   );
 };

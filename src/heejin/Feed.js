@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Feed.css";
 import AutoAwesomeOutlinedIcon from "@mui/icons-material/AutoAwesomeOutlined";
 import TweetBox from "./TweetBox";
+import FeedTweetList from "../zmin/FeedTweetList";
 
 function Feed() {
   return (
@@ -16,6 +17,7 @@ function Feed() {
       </div>
 
       <TweetBox />
+      <FeedTweetList/>
     </div>
   );
 }

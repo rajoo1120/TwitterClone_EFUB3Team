@@ -7,7 +7,7 @@ const Trends = () => {
   return (
     <GrayBox title='트렌드'>
       {trendKeywords.map((keyword, idx) =>
-        <TrendItem rank={idx+1} keyword={keyword} tweetAmount='1,886' field='음식'/>
+        <TrendItem key={idx} rank={idx+1} keyword={keyword} tweetAmount='1,886' field='음식'/>
       )}
       <TrendItem rank='9' keyword='맛있겠다' tweetAmount='52'/>
     </GrayBox>

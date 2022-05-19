@@ -12,9 +12,12 @@ const FooterBox = styled.div`
 `;
 
 const Item = styled.div`
+  display: flex;
+  
   color: rgb(83, 100, 113);
   padding-right: 13px;
   line-height: 20px;
+  height: 20px;
   text-decoration: none;
   :hover {
     text-decoration: underline;
