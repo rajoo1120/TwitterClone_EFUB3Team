@@ -10,18 +10,22 @@ const EmptySpace = styled.div`
 
 const RightContent = styled.div`
   width: 350px;
-  padding-left: 30px; 
+  padding-left: 30px;
+  overflow-y: scroll;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const RightSideBar = () => {
   return (
     <RightContent>
-      <Search/>
-      <EmptySpace/>
-      <Trends/>
-      <FollowRecommendation/>
-      <RightFooter/>
-      <EmptySpace/>
+      <Search />
+      <EmptySpace />
+      <Trends />
+      <FollowRecommendation />
+      <RightFooter />
+      <EmptySpace />
     </RightContent>
   );
 };

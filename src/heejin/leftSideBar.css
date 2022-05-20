@@ -1,5 +1,5 @@
 .leftSideBar {
-  border-right: 1px solid lightgrey;
+  border-right: 1px solid rgb(239, 243, 244);
   min-width: 250px;
   position: sticky; /*스크롤해도 element 고정되게*/
   overflow: auto; /*넘치면 스크롤*/
