@@ -51,12 +51,12 @@ const ModalText = styled.div`
   line-height: 20px;
 `;
 
-const MoreModal = ({openModal, deleteTweet ,idx}) => {
+const MoreModal = ({openModal, deleteTweet ,tweetId}) => {
   return(
     <>
       <Background onClick={()=>openModal(false)}/>
       <WhiteBox onClick={()=>openModal(false)}>
-        <ModalElement onClick={()=>deleteTweet(idx)}>
+        <ModalElement onClick={()=>deleteTweet(tweetId)}>
           <ModalIcon>
             <TrashIcon/>
           </ModalIcon>

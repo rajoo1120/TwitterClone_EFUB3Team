@@ -102,14 +102,14 @@ const TweetMenu = styled.div`
 
 
 
-const FeedTweet = ({id, writerName, writerId, date, tweet, deleteTweet}) => {
+const FeedTweet = ({tweetId, writerName, writerId, date, tweet, deleteTweet}) => {
 
   const [moreMenuOpen, setMoreMenuOpen] = useState(false);
 
   return(
     <>
       <TweetBox>
-        {moreMenuOpen? <MoreModal openModal={setMoreMenuOpen} deleteTweet={deleteTweet} idx={id}/> : null}
+        {moreMenuOpen? <MoreModal openModal={setMoreMenuOpen} deleteTweet={deleteTweet} tweetId={tweetId}/> : null}
         <TweetProfileImg>
           <img
             alt='profile'
