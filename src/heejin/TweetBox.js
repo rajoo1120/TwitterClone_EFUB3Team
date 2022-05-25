@@ -7,19 +7,21 @@ import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import SentimentSatisfiedOutlinedIcon from "@mui/icons-material/SentimentSatisfiedOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import axios from "axios";
 
 function TweetBox() {
   const [tweetMessage, setTweetMessage] = useState("");
-  const [tweetImage, setTweetImage] = useState("");
 
-  /*
-    db연결 부분 ?
-    const sendTweet = (e) => {
-        e.preventDefault();
-
-
-    };
-    */
+  const sendTweet = async () => {
+    console.log(tweetMessage);
+    const response = await axios
+      .post("/tweets", {
+        userId: 1,
+        contents: tweetMessage,
+      })
+      .catch((e) => console.log(response));
+    setTweetMessage("");
+  };
 
   return (
     <div className="tweetBox">
@@ -52,8 +54,12 @@ function TweetBox() {
               <TweetBoxItem Icon={LocationOnOutlinedIcon} />
             </div>
             <div className="tweetBoxOptions_right">
-              <button type="submit" className="tweetBox_btn">
-                트윗
+              <button
+                onClick={sendTweet}
+                type="submit"
+                className="tweetBox_btn"
+              >
+                트윗하기
               </button>
             </div>
           </div>
